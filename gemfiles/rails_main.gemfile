@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git "https://github.com/rails/rails.git", branch: "main" do
+  gem "activemodel"
+  gem "activesupport"
+  gem "actionpack"
+end
+
+gemspec path: ".."
