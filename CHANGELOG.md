@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.1]
+
+- Include `ActiveModel::Conversion` in `TypedFormModel::Base` so instances respond to `to_model`/`to_key`/`to_param`/`to_partial_path`. Fixes `NoMethodError: undefined method 'to_key'` when passing a form to `form_with(model:)`. (#1)
+
 ## [1.0.0]
 
 First release. Initial public extraction.
