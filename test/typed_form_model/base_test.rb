@@ -1603,12 +1603,15 @@ class TypedFormModel::BaseTest < ActiveSupport::TestCase
     refute_respond_to form_class, :attribute_names
   end
 
-  def test_to_key_instance_method_is_removed
+  def test_to_key_comes_from_active_model_conversion
     form_class = Class.new(TypedFormModel::Base) do
       prop :name, String
     end
+    form = form_class.new(name: "x")
 
-    refute_respond_to form_class.new(name: "x"), :to_key
+    assert_equal ::ActiveModel::Conversion, form.method(:to_key).owner,
+      "to_key must come from ActiveModel::Conversion (needed by form_with(model:)), not a custom override"
+    assert_nil form.to_key
   end
 
   def test_plus_alias_for_merge_is_removed
