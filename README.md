@@ -23,7 +23,7 @@ gem "typed_form_model"
 bundle install
 ```
 
-Requires Rails ≥ 8.0 and Ruby ≥ 3.2. Hard dependencies: `literal`, `activemodel`, `activesupport`, `actionpack`, `bigdecimal`.
+Requires Rails ≥ 8.0 and Ruby ≥ 3.3. Hard dependencies: `literal`, `activemodel`, `activesupport`, `actionpack`, `bigdecimal`.
 
 ---
 
