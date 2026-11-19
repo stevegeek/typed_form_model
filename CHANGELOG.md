@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased]
+
+- Minimum Ruby 3.3 (3.2 is end-of-life).
+
 ## [1.0.1]
 
 - Include `ActiveModel::Conversion` in `TypedFormModel::Base` so instances respond to `to_model`/`to_key`/`to_param`/`to_partial_path`. Fixes `NoMethodError: undefined method 'to_key'` when passing a form to `form_with(model:)`. (#1)
